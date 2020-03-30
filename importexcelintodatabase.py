@@ -10,7 +10,7 @@ import psycopg2
 host="localhost"
 portnumber="5432"
 username="postgres"
-password="avinash12"
+password=""
 databasename="Database for test"
 
 
