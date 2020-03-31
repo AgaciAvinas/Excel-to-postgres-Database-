@@ -79,3 +79,24 @@ print(query1)
 cursor.execute(query1)
 connection.commit()
 print("Table created successfully in PostgreSQL")
+
+#Inserting values in respective columns
+
+Column1_values = data[column1]
+print(Column1_values)
+Column2_values = data[column2]
+print(Column2_values)
+Column3_values = data[column3]
+print(Column3_values)
+Column4_values = data[column4]
+print(Column4_values)
+Column5_values = data[column5]
+print(Column5_values)
+
+# If you are passing string ensure that you have enclosed it with "'" 
+
+for (i,j,k,l,m) in zip(Column1_values,Column2_values,Column3_values,Column4_values,Column5_values):
+    insert_query = 'INSERT INTO bill ('+column1+','+column2+','+column3+','+column4+','+column5+') VALUES('+str(i)+','+str(j)+','+str(k)+','+str(l)+','"'"+str(m)+"'"');'
+    cursor.execute(insert_query)
+    connection.commit()
+print("Inserted Values Successfully")
